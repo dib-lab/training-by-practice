@@ -9,8 +9,12 @@ grep "^chr1[7-9]" hg19.coding.bed > hg19.coding_subset.bed
 rm hg19.coding.bed
 
 
-## Task1: sort the bed file by exon no in descending order
+## Task1: Print few lines of the file hg19.coding.bed to the screen to check the format of the file
 
 
-## Task2: copy the first 20 transcripts in the sorted file into new file 
+## Task2: sort the bed file by exon no in ascending order. Name the new file "hg19.coding_subset.sorted.bed" 
+
+
+## Task3: extract transcripts with 3 exons from the sorted file from task2. Name the new file "hg19.coding_subset.3exon.sorted.bed" 
+
 
