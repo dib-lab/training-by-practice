@@ -1,5 +1,11 @@
 # training-by-practice
-Git hub repository for intial training on Bash commands and co-operation on github.
+This is a Git hub repository for intial training on Bash commands and co-operation on github. The repository has 3 files:
+
+1.  hg19.coding_subset.bed: This a bed file for coding genes of 3 human chromosomes. This file represents the input of required tasks. 
+2.  main.sh: This is a bash script file. At the begining, I explain how I created the bed file. Then there is description of the required tasks
+3.  README file: This is the file you are reading now.
+
+# Manual of the github steps to work this out
 
 1.  Fork the repository from the dib-lab page to your account
 2.  clone the repo to your computer (exchange the word "USER" with you github username)
@@ -24,5 +30,10 @@ Git hub repository for intial training on Bash commands and co-operation on gith
     `git commit -m "name tasks you finished"`
     
     `git push origin template1`
-7.  make pull request from your github webpage. Make sure to change the branch to the template branch before making the pull request 
+8.  make pull request from your github webpage. Make sure to change the branch to the template branch before making the pull request.
+9.  When your pull request is accepted, more tasks will be added. You need to pull these new changes to your local repo. Make sure you are in the tamplate branch. Then you can repeat the steps 6-8 and so on 
+
+   `git checkout template1`
+   
+   `git pull origin template1`
 
