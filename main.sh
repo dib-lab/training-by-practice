@@ -10,7 +10,7 @@ rm hg19.coding.bed
 
 
 ## Task1: Print few lines of the file hg19.coding.bed to the screen to check the format of the file
-
+head hg19.coding_subset.bed
 
 ## Task2: sort the bed file by exon no in ascending order. Name the new file "hg19.coding_subset.sorted.bed" 
 
