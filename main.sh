@@ -10,11 +10,11 @@ rm hg19.coding.bed
 
 
 ## Task1: Print few lines of the file hg19.coding.bed to the screen to check the format of the file
-
+head -n 3 hg19.coding_subset.bed
 
 ## Task2: sort the bed file by exon no in ascending order. Name the new file "hg19.coding_subset.sorted.bed" 
-
+sort -n -k 10,10 hg19.coding_subset.bed > hg19.coding_subset.sorted.bed
 
 ## Task3: extract transcripts with 3 exons from the sorted file from task2. Name the new file "hg19.coding_subset.3exon.sorted.bed" 
-
+awk '$10==3' hg19.coding_subset.sorted.bed > hg19.coding_subset.3exon.sorted.bed
 
