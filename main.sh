@@ -23,3 +23,4 @@ awk 'chr17' hg19.coding_subset.sorted.bed | awk '$10==3' hg19.coding_subset.sort
 
 ## Task5: starting with the original input file, make a new column that has the length of transcript in the genome. For examle if it starts at 1 and ends at 500 then its length would be 499. Save the new file under the name "hg19.coding_subset.length.bed"
 awk '{ $13 = $3 - $2 } 1' hg19.coding_subset.bed > hg19.coding_subset.length.bed
+
