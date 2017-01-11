@@ -30,6 +30,6 @@ sed 's/chr//' hg19.coding_subset.bed > hg19.coding_subset.ensFormat.bed
 ## Task7: We need to collect transcripts that are labeled as "EnsCodingFull" in column 4. Save the new file under the name "hg19.coding_subset.EnsCodingFull.bed"
 awk '/EnsCodingFull/' hg19.coding_subset.bed > hg19.coding_subset.EnsCodingFull.bed
 
-#Or if we want to specifically on look for this label in column 4, this seems to work:
+#Or if we want to specifically look for this label in column 4, this seems to work:
 awk '$4 ~ /EnsCodingFull/' hg19.coding_subset.bed > hg19.coding_subset.EnsCodingFull.bed
 
