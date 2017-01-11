@@ -35,5 +35,5 @@ This is a Git hub repository for intial training on Bash commands and co-operati
 
    `git checkout template1`
    
-   `git pull origin template1`
+   `git pull DIB template1`
 
