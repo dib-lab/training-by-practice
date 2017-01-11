@@ -25,8 +25,11 @@ awk '/chr17/' hg19.coding_subset.sorted.bed | awk '$10==3' > hg19.coding_subset.
 awk 'BEGIN { OFS = "\t" } { $13 = $3 - $2 } 1' hg19.coding_subset.bed > hg19.coding_subset.length.bed
 
 ## Task6: starting with the original input file, we need to edit column 1 to remove the "chr" prefix in the chromosome name. For example, we will change chr17 to 17. Save the new file under the name "hg19.coding_subset.ensFormat.bed"
-
+sed 's/chr//' hg19.coding_subset.bed > hg19.coding_subset.ensFormat.bed
 
 ## Task7: We need to collect transcripts that are labeled as "EnsCodingFull" in column 4. Save the new file under the name "hg19.coding_subset.EnsCodingFull.bed"
+awk '/EnsCodingFull/' hg19.coding_subset.bed > hg19.coding_subset.EnsCodingFull.bed
 
+#Or if we want to specifically on look for this label in column 4, this seems to work:
+awk '$4 ~ /EnsCodingFull/' hg19.coding_subset.bed > hg19.coding_subset.EnsCodingFull.bed
 
