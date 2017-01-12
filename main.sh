@@ -38,3 +38,8 @@ awk '/EnsCodingFull/' hg19.coding_subset.bed > hg19.coding_subset.EnsCodingFull.
 #Or if we want to specifically look for this label in column 4, this seems to work:
 awk '$4 ~ /EnsCodingFull/' hg19.coding_subset.bed > hg19.coding_subset.EnsCodingFull.bed
 
+
+
+
+
+
