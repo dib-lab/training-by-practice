@@ -43,3 +43,18 @@ awk '$4 ~ /EnsCodingFull/' hg19.coding_subset.bed > hg19.coding_subset.EnsCoding
 
 
 
+## Task8: compare the 2 files: hg19.coding_subset.bed and hg19.coding_subset.EnsCodingFull.bed to see which lines have removed.
+
+
+## Task9: Cut the last 2 lines from the file "hg19.coding_subset.bed". Save in "hg19.coding_subset.truncated.bed"
+
+
+## Task10: Count how many transcripts have 5 exons
+
+
+## Task11: check how many lines do you have in all the bed files in your folder
+
+
+## Task12: find isoforms of that have the same start co-ordinates in hg19.coding_subset.bed
+
+
