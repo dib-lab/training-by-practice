@@ -55,5 +55,5 @@ awk '$10==5' hg19.coding_subset.sorted.bed | wc -l
 wc -l *
 
 ## Task12: find isoforms of that have the same start co-ordinates in hg19.coding_subset.bed
-
+awk 'n=x[$1, $2] {print n"\n"$0;} {x[$1, $2]=$0}' hg19.coding_subset.bed > hg19.coding_subset.isoforms.bed
 
