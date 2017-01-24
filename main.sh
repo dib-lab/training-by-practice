@@ -45,8 +45,7 @@ grep -F -x -v -f hg19.coding_subset.EnsCodingFull.bed hg19.coding_subset.bed > h
 #can use wc -l to determine number of lines not in EnsCodingFull file
 
 ## Task9: Cut the last 2 lines from the file "hg19.coding_subset.bed". Save in "hg19.coding_subset.truncated.bed"
-tail -n 2 hg19.coding_subset.bed > hg19.coding_subset.truncated.bed
-#works as long as we don't want to alter the original file and delete the last two lines from it
+head -n -2 hg19.coding_subset.bed > hg19.coding_subset.truncated.bed
 
 ## Task10: Count how many transcripts have 5 exons
 awk '$10==5' hg19.coding_subset.sorted.bed | wc -l
