@@ -45,3 +45,9 @@ rm hg19.coding.bed
 ## Task12: find isoforms of that have the same start co-ordinates in hg19.coding_subset.bed
 
 
+## Task13: make a for loop to go through all bed files in the folder. For each bed file, count the no of transcripts on the negative strand. Save file names and corresponding counts in a single output file. Name the output file trans_negative.count
+
+
+## Task14: starting with the original input file, make a new column that has the length of coding sequence of each transcript. For example, a transcript that has 3 exons and their lengthes are 100,150,and 200, its length will be 100+150+200=450 bp. Save the new file under the name "hg19.coding_subset.coding_length.bed". Notice the difference from task no 5
+
+
