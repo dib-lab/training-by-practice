@@ -63,7 +63,7 @@ grep -f hg19.coding_subset.uniq1_2.bed hg19.coding_subset.sort1_2.bed > hg19.cod
 #save following in trans_negative.count.sh file
 for bedfile in *.bed
 do
-	echo -n "$bedfile : "; awk '$6 ~ /-/ {n++} END {print n+0}' $bedfile -o trans_negative.count
+	echo -n "$bedfile : "; awk '$6 ~ /-/ {n++} END {print n+0}' $bedfile
 done
 
 #in terminal
