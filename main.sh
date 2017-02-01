@@ -76,8 +76,8 @@ awk '{print $11}' hg19.coding_subset.bed | sed 's/,/\t/g' | awk '{for(i=1; i<=NF
 paste hg19.coding_subset.bed length.bed > hg19.coding_subset.coding_length.bed
 
 #I like the new column right after the 11th column so the total length of coding sequence comes right after exon sizes
-awk '{print $1"\t"$2"\t"$3"\t"$4"\t"$5"\t"$6"\t"$7"\t"$8"\t"$9"\t"$10"\t"$11}' hg19.coding_subset.bed > 1_11.bed
-awk '{print $12}' hg19.coding_subset.bed > 12.bed
+cut -f1-11 hg19.coding_subset.bed > columns1_11.bed
+cut -f12 hg19.coding_subset.bed > column12.bed
 
-Paste 1_11.bed length.bed 12.bed > hg19.coding_subset.coding_length.bed
+Paste columns1_11.bed length.bed column12.bed > hg19.coding_subset.coding_length.bed
 
