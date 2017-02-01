@@ -60,7 +60,24 @@ grep -f hg19.coding_subset.uniq1_2.bed hg19.coding_subset.sort1_2.bed > hg19.cod
 
 ## Task13: make a for loop to go through all bed files in the folder. For each bed file, count the no of transcripts on the negative strand. Save file names and corresponding counts in a single output file. Name the output file trans_negative.count
 
+#save following in trans_negative.count.sh file
+for bedfile in *.bed
+do
+	echo -n "$bedfile : "; awk '$6 ~ /-/ {n++} END {print n}' $bedfile
+done > trans_negative.count
+
+#in terminal
+./trans_negative.count.sh > trans_negative.count
 
 ## Task14: starting with the original input file, make a new column that has the length of coding sequence of each transcript. For example, a transcript that has 3 exons and their lengthes are 100,150,and 200, its length will be 100+150+200=450 bp. Save the new file under the name "hg19.coding_subset.coding_length.bed". Notice the difference from task no 5
+awk '{print $11}' hg19.coding_subset.bed | awk -F"," '{for(i=1; i<=NF; i++) x+=$i; print x}' > length.bed 
 
+#if you like the new column at the very end:
+paste hg19.coding_subset.bed length.bed > hg19.coding_subset.coding_length.bed
+
+#I like the new column right after the 11th column so the total length of coding sequence comes right after exon sizes
+cut -f1-11 hg19.coding_subset.bed > columns1_11.bed
+cut -f12 hg19.coding_subset.bed > column12.bed
+
+paste columns1_11.bed length.bed column12.bed > hg19.coding_subset.coding_length.bed
 
